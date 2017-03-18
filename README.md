@@ -5,6 +5,7 @@
 
     clone项目
     npm install 安装依赖包
+    mkdir log; chmod 777 log;  创建日志目录
     在dist/下编写html文件
     在src/scss下编写scss文件
     运行 gulp  (或运行 start.sh 以服务方式后台运行）
