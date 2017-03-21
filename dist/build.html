@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>YEJS - 标准演示</title>
+<!-- vue & museui -->
+<link rel="stylesheet" href="style/font.css">
+<link rel="stylesheet" href="style/icon.css">
+<link rel="stylesheet" href="style/muse-ui.css">
+<link rel="stylesheet" href="style/theme-teal.css">
+<link rel="stylesheet" href="style/full.css">
+<script src="lib/require.js" charset="utf-8" type="text/javascript"></script>
+<script src="page/config.js" charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+
+<!-- vue & museui -->
+<h1>这是JS编译版本，加载 _index_build.js</h1>
+<div id="main">
+	<app :data="data"></app>
+</div>
+<script type="text/javascript">
+	var data = {
+			header:{
+				pageTitle:'It is a YEJS demo',
+				menuList:[
+        			{id:1, name:'SASS+mobi', link:'/scss.html'},
+       				{id:2, name:'JS编译', link:'/build.html'}
+       			]
+			}
+
+	};
+</script>
+<script src="page/index/_index_build.js"></script>
+
+
+</body>
+</html>
