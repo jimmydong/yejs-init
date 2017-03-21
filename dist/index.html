@@ -1,16 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>YEJS - 标准演示</title>
+<!-- vue & museui -->
+<link rel="stylesheet" href="style/font.css">
+<link rel="stylesheet" href="style/icon.css">
+<link rel="stylesheet" href="style/muse-ui.css">
+<link rel="stylesheet" href="style/theme-teal.css">
+<link rel="stylesheet" href="style/full.css">
+<script src="lib/require.js" charset="utf-8" type="text/javascript"></script>
+<script src="page/config.js" charset="utf-8" type="text/javascript"></script>
+<!-- mobiui -->
 <link href="lib/mobi.css/dist/mobi.css" rel="stylesheet"/>
 <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet"/>
 <link href="css/theme.css" rel="stylesheet"/>
 </head>
 <body>
-<div class="header">
- asdfisdfasdfsd  Hello world!
+<!-- vue & museui -->
+<div id="main">
+	<app :data="data"></app>
 </div>
-<h1>test</h1>
-<p>This is a test for browser-sync.</p>
-<h2>kakaOK?</h2>
+<script type="text/javascript">
+	var data = {
+			header:{
+				pageTitle:'It is a YEJS demo',
+				menuList:[
+        			{id:1, name:'SASS+mobi', link:'/scss.html'},
+       				{id:2, name:'JS编译', link:'/build.html'}
+       			]
+			}
+
+	};
+	var page = "page/index/index";
+	require(["vue", page, "museui", "ysvue"], function(Vue, app, museui, ysvue){
+		Vue.use(museui);
+		Vue.use(ysvue);
+		new Vue({
+			el: "#main",
+			data: {
+				data: data
+			},
+			components: {
+				app: app
+			},
+			methods: {
+		    }
+		});
+	});
+</script>
+
 </body>
 </html>
