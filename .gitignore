@@ -3,4 +3,5 @@ dist
 .settings
 .project
 log
+.svn
 
