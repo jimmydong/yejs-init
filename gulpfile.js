@@ -30,7 +30,8 @@ gulp.task('js-build', function() {
 
 function jsBuild(event){
 	//console.log("jsBuild: " + event.path);
-	if(event.path.match(/_build/g)) return;
+	if(event.path.match(/_build.js/g)) return;
+	if(event.path.match(/dist\/lib/g)) return;
 	if(! event.path.match(new RegExp(__dirname + '/dist/'))) return;
 	rjs.optimize({
 		baseUrl: "./dist/",

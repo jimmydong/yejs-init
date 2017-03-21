@@ -10,7 +10,8 @@ define(function(require){
 		template: tpl,
 		props: ['data'],
 		data: function(){
-			return {}
+			return {
+			}
 		},
 		components: {
 			vheader: vheader,
@@ -19,7 +20,6 @@ define(function(require){
 		methods: {
 			handleClick: function(){
 				data.content = "<h1>HTML test OK</h1>";
-				this.$toast('hello world!');
 			}
 		}
 	});
