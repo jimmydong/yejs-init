@@ -28,8 +28,22 @@ gulp.task('js-build', function() {
 	reload({stream: true});
 })
 
+function jsBuild(event){
+	//console.log("jsBuild: " + event.path);
+	if(event.path.match(/_build/g)) return;
+	if(! event.path.match(new RegExp(__dirname + '/dist/'))) return;
+	rjs.optimize({
+		baseUrl: "./dist/",
+	    mainConfigFile: "./dist/page/config.js",
+		name: "page/index/_index",
+		out: "dist/page/index/_index_build.js"
+	});
+	console.log(event.path + " changed, rebuild ok");
+	reload({stream: true});
+}
+
 // browserSync server
-gulp.task('server', function() {
+gulp.task('server', function(){
 	browserSync.init({
 		server: {
 			baseDir: "./dist/",
@@ -44,9 +58,11 @@ gulp.task('server', function() {
 		open: false
 	});
 	gulp.watch("src/**/*.scss", ['scss-build']);
-	gulp.watch("**/![_]*.(html|js)", ['js-build']);
+	gulp.watch(["dist/**/*.html","dist/**/*.js"], jsBuild);
 	gulp.watch("dist/*.html").on('change', reload);
 });
+
+
 
 //默认执行以下任务:
 //gulp.task('default', ['js-build']);
