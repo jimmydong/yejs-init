@@ -39,7 +39,7 @@ function jsBuild(event){
 		out: "dist/page/index/_index_build.js"
 	});
 	console.log(event.path + " changed, rebuild ok");
-	reload({stream: true});
+	reload();
 }
 
 // browserSync server
