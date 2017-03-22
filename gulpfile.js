@@ -29,10 +29,13 @@ gulp.task('js-build', function() {
 })
 
 function jsBuild(event){
-	//console.log("jsBuild: " + event.path);
+	//console.log("jsBuild: " + event.path + ',' + event.type);
 	if(event.path.match(/_build.js/g)) return;
 	if(event.path.match(/dist\/lib/g)) return;
 	if(! event.path.match(new RegExp(__dirname + '/dist/'))) return;
+	
+	//演示版本，仅更新index
+	//TODO:: 区分page和compoment: page下只更新一个主js，compoment需要遍历更新page下所有主js
 	rjs.optimize({
 		baseUrl: "./dist/",
 	    mainConfigFile: "./dist/page/config.js",
@@ -60,10 +63,7 @@ gulp.task('server', function(){
 	});
 	gulp.watch("src/**/*.scss", ['scss-build']);
 	gulp.watch(["dist/**/*.html","dist/**/*.js"], jsBuild);
-	gulp.watch("dist/*.html").on('change', reload);
 });
-
-
 
 //默认执行以下任务:
 //gulp.task('default', ['js-build']);
