@@ -3,6 +3,7 @@
  */
 requirejs.config({
 	baseUrl: "../",
+	waitSeconds: 200,
     paths :{
         bus: "./lib/bus",
         jquery:"./lib/jquery.min",
@@ -11,6 +12,7 @@ requirejs.config({
         text: "./lib/text",
         mintui: "./lib/mint-ui",
         museui: "./lib/muse-ui",
+        vuerouter: "./lib/vue-router",
         ysvue: "./lib/ys-vue", // YS-VUE的自定义插件
         ys: "./lib/ys", // 自定义功能函数的模块
         components: "./component"

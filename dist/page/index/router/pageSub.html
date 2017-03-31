@@ -1,0 +1,13 @@
+<div>
+	<mu-appbar title="Subpage">
+	  <mu-icon-button icon='menu' slot="left"/>
+	  <mu-icon-button icon='expand_more' slot="right"/>
+	</mu-appbar>
+
+	<mu-card>
+		<mu-card-title title="当前路由路径" subTitle="subTitle"/>
+		<mu-card-text>
+		{{$route.path}}
+		</mu-card-text>
+	</mu-card>
+</div>

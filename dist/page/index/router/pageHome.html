@@ -1,0 +1,10 @@
+<div>
+	<mu-appbar title="router演示">
+		<mu-icon-button icon='add' @click="$router.push({path: '/user'})" slot="right"/>
+	</mu-appbar>
+  <mu-list>
+    <mu-list-item :title="user.name" v-for="user in users" @click="$router.push('/user/'+user.id)">
+      <mu-avatar :src="user.head" slot="rightAvatar"/>
+    </mu-list-item>
+  </mu-list>
+</div>

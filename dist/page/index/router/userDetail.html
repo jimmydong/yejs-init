@@ -1,0 +1,15 @@
+<div>
+	<mu-appbar title="详情">
+		<mu-icon-button icon='keyboard_arrow_left' @click="$router.go(-1)" slot="left"/>
+	</mu-appbar>
+	{{$route.params.id}}
+    <mu-card>
+    	<mu-card-header title="用户详情"  subTitle="用户ID为{$route.params.id}">
+    		<mu-avatar src="/image/avatar.jpg"/>
+    	</mu-card-header>
+    	<mu-card-text>
+    		Hello world!
+    		OK!
+    	</mu-card-text>
+    </mu-card>
+</div>

@@ -5,7 +5,7 @@ echo '# usage:  ./build.sh [_c] [_a] [debug]'
 echo '# eg: ./build.sh index index true'
 echo
  
-file="$1/build_$2_profile.js"
+file="$1/_$2_profile.js"
 if [ -f $file ]; then
   if [ -n $3 ]; then
     node r.js -o $file optimize=none  

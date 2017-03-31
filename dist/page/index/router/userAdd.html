@@ -1,0 +1,23 @@
+<div>
+	<mu-appbar title="添加用户">
+		<mu-icon-button icon='keyboard_arrow_left' @click="$router.go(-1)" slot="left"/>
+	</mu-appbar>
+
+    <mu-card>
+    	<mu-card-header title="添加用户" subTitle="this is a demo">
+    		<mu-avatar src="/image/avatar.jpg"/>
+    	</mu-card-header>
+    	<div class="container">
+	    	<mu-text-field hintText="姓名"/><br/>
+	    	<mu-select-field label="选择游戏">
+			   <mu-menu-item value="1" title="阴阳师"/>
+			   <mu-menu-item value="2" title="影之刃"/>
+			   <mu-menu-item value="3" title="天下HD"/>
+			   <mu-menu-item value="4" title="穿越火线"/>
+			   <mu-menu-item value="5" title="英雄联盟"/>
+			   <mu-menu-item value="6" title="王者荣耀"/>
+			</mu-select-field>
+		</div>
+    </mu-card>
+
+</div>
