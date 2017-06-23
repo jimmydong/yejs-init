@@ -7,8 +7,9 @@ Yam Easy JavaScript 番薯JS快速开发原型
 1，准备工作
 
     clone项目
-    npm install 安装依赖包
-    mkdir log; chmod 777 log;  创建日志目录
+    npm install    #安装依赖包
+    mkdir log      #创建日志目录
+    chmod 777 log  #可写  
 
 2，使用vue+museui创建单页面项目（非编译模式）
 
