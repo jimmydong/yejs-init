@@ -37,6 +37,9 @@ Yam Easy JavaScript 番薯JS快速开发原型
 	4，将主页面文件改写为加载编译结果文件
 	（实际上，2的编译主文件内容就是从主JS中剪切出来的部分）
 
+[注] 整体使用YEPF框架时，_[action]_profile.js 和 _[action].js 文件在使用build.sh时自动生成。参考： https://github.com/jimmydong/YEPF3/tree/master/demo/QyRoot/yejs
+		
+
 6，以后台方式运行
 
 	./start.sh 
